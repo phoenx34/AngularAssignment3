@@ -1,0 +1,17 @@
+<button
+  type="button"
+  class="btn btn-primary"
+  (click)="onDisplayDetails()"
+>
+    Display Details
+</button>
+<p *ngIf="displayDetails">Username: phoenx34 password: fuckyou</p>
+<hr>
+<p
+  *ngFor="let button of buttonHistory; let i=index"
+  [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+  [ngClass]="{greater: i >= 4}"
+>
+    {{ button }}
+</p>
+
